@@ -3,33 +3,29 @@
 <head>
 	<title>HRNBeatZ - Music Producer</title>
  
-<style type="text/css">
-/* CSS Ad block */
-#kc56{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;opacity:.98;display:block;z-index:9999;overflow:hidden}
-#kc56 p{color:#000;text-align:center;margin:15% auto;font-size:2rem;max-width:750px;display:table;line-height:1.5;}
-#kc56 p:before{content:'\f023';font-family:fontawesome;background:#ff675c;color:#fff;text-align:center;display:block;padding:0;width:2em;height:2em;line-height:2em;font-size:2.5rem;clear:both;border-radius:100%;margin:0 auto 3%;font-weight:normal;box-shadow:inset 0 0 5px rgba(0,0,0,.1)}
-#kc56 p:hover:before{content:'\f13e'}
-#kc56 p a,#kc56 p i{font-size:12px}
-#kc56 ~ *{display:none}
+<style>
+.abp-box { font-family: "Source Sans Pro", sans-serif;width:360px; padding:10px 15px 10px 35px; margin:5px; color:#555; font-size:11px; top:15px; right:15px; z-index:1000; position:fixed; border-radius:10px; border:1px solid #f5aca6;}
+.abp-box:hover{border:1px solid #f00;}
+.abp-msg { background:#ffecec url('http://i.imgur.com/n5DKdKZ.png') no-repeat 10px 50%; }
 </style>
-	
-<link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 	
 </head>
 <body>
 
-<div id="main-content">
-Everything to be hidden goes here
+<div id="ac-wrapper" style="display:none">
+<div class="abp-box abp-msg GoogleAd">Installer <a href="https://adblockplus.org/" title="Installer Adblock Plus" target="_blank"><b>Adblock Plus</b></a> to surf the web without annoying ads! Can blocks banners, pop-ups, tracking, malware and more...</div>
 </div>
-
-<script type="text/javascript" src="/advertisement.js"></script>
-<script type="text/javascript">
-if (document.getElementById("testadblock") == undefined)
-{
-document.getElementById('main-content').innerHTML="<p><strong>We hid the content because you hid the ads :(</strong><br/>It seems <em>you have blocked the ads</em> on this website. We can't run this website without our sponsors. We do not put any annoying popups or popunders. Moreover, all the ads are relevant and family safe. So, please disable your Ad Blocker software and <a href=''>refresh this page</a> to see the content.</p>";
-}
-</script>
 		
-	
+<script type="text/javascript">
+    function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+    else document.getElementById('ac-wrapper').removeAttribute('style');
+}
+window.onload = function () {
+    setTimeout(function () {
+        PopUp('show');
+    }, 10000);
+}
+</script>	
 </body>
 </html>
