@@ -64,7 +64,7 @@
 
     return '<div class="jquery-adi">' +
       '<div class="jquery-adi_content">' +
-      '<button class="jquery-adi_close"></button>' +
+      '<button class="jquery-adi_close">X</button>' +
       '<h2>' + title + '</h2>' +
       '<p>' + content + '</p>' +
       '</div>' +
@@ -130,8 +130,8 @@
    */
 
   Adi.defaults = {
-    title: '¡Adblock detectado!',
-    content: 'Hemos observado que tienes un Ad Blocker activado. Ya sabemos que es muy cómodo, ¡¡¡¡Pero nos estás haciendo una faena!!!.',
+    title: 'Adblock detected!',
+    content: 'We have noticed that you have an active Adblock. We already know it's very comfortable, Please disable your adblock.!',
     theme: 'light',
     onOpen: function() {},
     onClose: function() {},
@@ -167,20 +167,20 @@ $(document).ready(function() {
     inactive: function() {
 
       var tpl = '<h3>Vale tío, G.</h3>' +
-        '<img src="//media.giphy.com/media/POWvddaQEHrgc/giphy.gif" />';
+        '<img src="https://zippy.gfycat.com/ElementarySpotlessBlackfish.gif" />';
 
       $('.container').append(tpl);
 
-      console.log('Adblock no detectado :)');
+      console.log('Adblock not detected :)');
     },
     active: function() {
 
       var tpl = '<h3>Eres muy malo, G</h3>' +
-        '<img src="//media.giphy.com/media/4lhJQOACaIfWU/giphy.gif" />';
+        '<img src="http://brobry.com/api/images/pro/3x3x6x2x8x0.gif" />';
 
       $('.container').append(tpl);
 
-      console.log('Adblock detectado :(')
+      console.log('Adblock detected :(')
     }
   });
 
