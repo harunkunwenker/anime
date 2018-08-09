@@ -4,38 +4,25 @@
 <title>Detector Test Page</title>
 </head>
 <body>
-<h1>Testing the Detector</h1>
-
-<div class="banner_ad"> </div>
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-</script>
 <script>
-(function() {
-
-        var detector = function() {
-            setTimeout(function() {
-
-                if(!document.getElementsByClassName) return;
-                var ads =
-                        document.getElementsByClassName('banner_ad'),
-                    ad  = ads[ads.length - 1];
-
-                if(!ad || ad.innerHTML.length == 0
-                                || ad.clientHeight === 0) {
-                    console.log('Ad Blocker Detected');
-                } else {
-                    console.log('No Ad Blocker');
-                }
-
-            }, 2000);
-        }
-
-        /* Add a page load listener */
-        if(window.addEventListener) {
-            window.addEventListener('load', detector, true);
-        }
-})();
+  window.onload = function() {
+    setTimeout(function() {
+      if ( typeof(window.google_jobrunner) === "undefined" ) {
+        console.log("ad blocker installed");
+      } else {
+        console.log("no ad blocking found.");
+      }
+    }, 10000);  
+  };
 </script>
+        
+<script>var isAdBlockActive=true;</script>
+<script src="ads.js"></script>
+<script>
+if (isAdBlockActive) { 
+  console.log("The visitor is blocking ads");
+}
+</script>        
+        
 </body>
 </html>
