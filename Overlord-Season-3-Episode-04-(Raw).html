@@ -29,33 +29,23 @@
 <!--a img   { border: 0; } body    { margin: 0; padding: 0; text-align: center; background-color: #000000} -->
  </style>
 	
-<script type="text/javascript">
-window.onload = function() {
-var iframe = document.createElement('iframe'),
-    randomDomain = Math.floor(Math.random() * (10000 - 100 + 1)) + 100,
-    iframeLoaded = true;
+<div id="banner-12345">
+    Our website is made possible by displaying online advertisements to our visitors.<br>
+    Please consider supporting us by disabling your ad blocker on our website.
+</div>
+<style>
+    #banner-12345 {
+        display: none;
+        margin-bottom: 30px;
+        padding: 20px 10px;
+        border-radius: 5px;
+        background: #D30000;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
 
-iframe.src = "http://"+ randomDomain +".com/ads.html";
-iframe.height = ".1px";
-iframe.width = ".1px";
-iframe.id = 'some-ad';
-iframe.onload = function() {iframeLoaded = false;};
-
-document.body.appendChild(iframe);
-
-setTimeout(function() { 
-    var someAd = document.getElementById('some-ad');
-    if(!iframeLoaded ||
-       someAd == null || 
-       someAd.style.display == "none" || 
-       someAd.style.display == "hidden" || 
-       someAd.style.visibility == "hidden" || 
-       someAd.offsetHeight == 0)
-        document.getElementById('ab-message').style.display = 'block';
-    someAd.remove();
-}, 500);
-};
-</script>`<br>
 	
 </head>	
 <body onload="loadAds()">
@@ -132,13 +122,10 @@ for(i=0;i<ads.length;i++) {
 </div>
 
 <script type="text/javascript">
-    var adblock = false;
-</script>
-<script type="text/javascript" src="adframe.js"></script>
-<script type="text/javascript">
-    if(adblock) {
-          //adblock is installed and enabled on this site :-D
+    if ( !document.getElementById('test-block') ) {
+        document.getElementById('banner-12345').style.display='block';
     }
-</script>	
+</script>
+
 </body>
 </html>
