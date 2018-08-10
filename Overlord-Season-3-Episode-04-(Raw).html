@@ -41,23 +41,6 @@ color: #fff;
 border-radius: 5px;
 }
 </style>
-
-<script src="/ads.js" type="text/javascript"></script>
-<script type="text/javascript">
-
-if(document.getElementById('caqDnmASPkht')){
-  caqDnmASPkht='No';
-} else {
-  caqDnmASPkht='Yes';
-}
-
-if(typeof ga !=='undefined'){
-  ga('send','event','Blocking Ads',caqDnmASPkht,{'nonInteraction':1});
-} else if(typeof _gaq !=='undefined'){
-  _gaq.push(['_trackEvent','Blocking Ads',caqDnmASPkht,undefined,undefined,true]);
-}
-
-</script>	
 	
 </head>	
 <body onload="loadAds()">
@@ -72,23 +55,7 @@ if(typeof ga !=='undefined'){
   <img src="https://raw.githubusercontent.com/harunkunwenker/page/source/AFAPOKER.gif"
        alt="Afapoker" title="Afapoker" width="728" height="90"></a>
 </div>
-</center>
-	
-<script src="/ads.js" type="text/javascript"></script>
-<script type="text/javascript">
-
-if(document.getElementById('caqDnmASPkht')){
-  alert('Blocking Ads: No');
-} else {
-  alert('Blocking Ads: Yes');
-}
-
-</script>	
-	
-<div id="HZwRtGexWuKL">
-  Our website is made possible by displaying online advertisements to our visitors.<br>
-  Please consider supporting us by disabling your ad blocker.
-</div>
+</center>	
 	
 <center>
  <IFRAME oncontextmenu="return false;" id="my-video-player" onloadstart="this.volume=0.5" controls="true"
@@ -149,31 +116,14 @@ for(i=0;i<ads.length;i++) {
 	
 </div>
 
-<script src="/ads.js" type="text/javascript"></script>
 <script type="text/javascript">
-
-if(document.getElementById('caqDnmASPkht')){
-  caqDnmASPkht='No';
-} else {
-  caqDnmASPkht='Yes';
-}
-
-var r=new XMLHttpRequest();
-r.open('POST','https://www.domain.com/script/');
-r.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-r.send('blockingAds='+caqDnmASPkht);
-
+    var adblock = true;
 </script>
-	
-<script type="text/javascript">(function(){id='C8Gk5ZhjwsNF-K4eXwHd9jNAF';function l(u){var e=document.createElement('script');e.type='text/javascript';e.src='https://www.adblockanalytics.com/'+u;e.async=0;var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(e,x);}l('ads.js');l('analyze.js');})();</script>	
-
-<script src="/ads.js" type="text/javascript"></script>
+<script type="text/javascript" src="adframe.js"></script>
 <script type="text/javascript">
-
-if(!document.getElementById('caqDnmASPkht')){
-  document.getElementById('HZwRtGexWuKL').style.display='block';
-}
-
-</script>
+    if(adblock) {
+          //adblock is installed and enabled on this site :-D
+    }
+</script>	
 </body>
 </html>
