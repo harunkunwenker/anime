@@ -41,6 +41,23 @@ color: #fff;
 border-radius: 5px;
 }
 </style>
+
+<script src="/ads.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+if(document.getElementById('caqDnmASPkht')){
+  caqDnmASPkht='No';
+} else {
+  caqDnmASPkht='Yes';
+}
+
+if(typeof ga !=='undefined'){
+  ga('send','event','Blocking Ads',caqDnmASPkht,{'nonInteraction':1});
+} else if(typeof _gaq !=='undefined'){
+  _gaq.push(['_trackEvent','Blocking Ads',caqDnmASPkht,undefined,undefined,true]);
+}
+
+</script>	
 	
 </head>	
 <body onload="loadAds()">
