@@ -1,2 +1,9 @@
-wave Harun Kun Wenker is a social development environment. At its heart, it allows you to write code in the browser, and see the results of it as you build. A useful and liberating tool for developers of any skill, and particularly empowering for people learning to code. We focus primarily on front-end languages like HTML, CSS, JavaScript, and preprocessing syntaxes that turn into those things.
+raw.githack.com
+
+This is the source code behind raw.githack.com.
+
+The idea of this service is inspired from rawgit.com (formerly rawgithub.com). I just realized that using a whole framework (node.js with express.js) for such simple thing as requests proxying is overkilling, and made same stuff using nginx only.
+
+This is also a game: I am trying to implement the same functionality using nginx config files only. No programming languages allowed. Come join me!
+
 https://codepen.io/0utKast/pen/pjxwNg
