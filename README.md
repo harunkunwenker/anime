@@ -1,6 +1,6 @@
-raw.githack.com
+Anime Music Video
 
-This is the source code behind raw.githack.com.
+This is the source code behind Anime Music Video.
 
 The idea of this service is inspired from rawgit.com (formerly rawgithub.com). I just realized that using a whole framework (node.js with express.js) for such simple thing as requests proxying is overkilling, and made same stuff using nginx only.
 
