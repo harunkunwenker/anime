@@ -24,11 +24,6 @@
   </style>
 </head>
 <body>
-  <div class="info">
-    <p>
-      Set sources dynamically
-    </p>
-  </div>
 
   <video id='video' class="video-js vjs-default-skin"></video>
 
@@ -38,11 +33,10 @@
     </p>
   </div>
 
-  <video id="video_1" class="video-js vjs-default-skin" width="1000" controls data-setup='{}' muted>
-    <source src="https://vjs.zencdn.net/v/oceans.mp4?480" type='video/mp4' label='SD' res='480' />
-    <source src="https://vjs.zencdn.net/v/oceans.mp4?1080" type='video/mp4' label='HD' res='1080'/>
-    <source src="https://vjs.zencdn.net/v/oceans.mp4?144" type='video/mp4' label='phone' res='144'/>
-    <source src="https://vjs.zencdn.net/v/oceans.mp4?2160" type='video/mp4' label='4k' res='2160'/>
+  <video oncontextmenu="return false;" id="video_1" class="video-js vjs-default-skin" onloadstart="this.volume=0.5" poster="https://i.ytimg.com/vi/fonuGCQPMMU/maxresdefault.jpg" width="1000" controls data-setup='{}'>
+    <source src="https://www.hrnbeatzpro.me/wp-content/uploads/2019/01/videoplayback-480p.mp4?480" type='video/mp4' label='SD' res='480' />
+    <source src="https://www.hrnbeatzpro.me/wp-content/uploads/2019/01/Yunomi-TORIENA-タイムカプセル-Time-Capsule.mp4?1080" type='video/mp4' label='HD' res='1080'/>
+    <source src="https://www.hrnbeatzpro.me/wp-content/uploads/2019/01/videoplayback-360p.mp4?144" type='video/mp4' label='phone' res='144'/>
   </video>
   
 
@@ -51,41 +45,6 @@
     videojs.options.flash.swf = "https://raw.githack.com/kmoskwiak/videojs-resolution-switcher/gh-pages/node_modules/video.js/dist/video-js.swf"
   </script>
   <script src="https://raw.githack.com/kmoskwiak/videojs-resolution-switcher/master/lib/videojs-resolution-switcher.js"></script>
-  <script>
-    // fire up the plugin
-    videojs('video', {
-      controls: true,
-      muted: true,
-      width: 1000,
-      plugins: {
-        videoJsResolutionSwitcher: {
-          ui: true,
-          default: 'low', // Default resolution [{Number}, 'low', 'high'],
-          dynamicLabel: true // Display dynamic labels or gear symbol
-        }
-      }
-    }, function(){
-      var player = this;
-      window.player = player
-      player.updateSrc([
-        {
-          src: 'https://vjs.zencdn.net/v/oceans.mp4?sd',
-          type: 'video/mp4',
-          label: 'SD',
-          res: 360
-        },
-        {
-          src: 'https://vjs.zencdn.net/v/oceans.mp4?hd',
-          type: 'video/mp4',
-          label: 'HD',
-          res: 720
-        }
-      ])
-      player.on('resolutionchange', function(){
-        console.info('Source changed to %s', player.src())
-      })
-    })
-  </script>
 
 
   <script>
